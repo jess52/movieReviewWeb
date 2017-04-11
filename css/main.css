@@ -141,9 +141,64 @@ a:hover {
     left: 0;
     background: #56989b;
     z-index: 999;
-    padding-top: 80px; }
+    padding-top: 102px; }
     .sideNav ul {
       text-align: center;
       padding: 0; } }
+/*************** Tabs ***************/
+.container {
+  width: 90%;
+  background: #282f3a;
+  margin: 10px auto;
+  text-align: center; }
+
+.nav-pills {
+  margin: 21px 0 20px 0;
+  float: none;
+  display: inline-block; }
+  .nav-pills li + li {
+    margin-left: 43px; }
+  .nav-pills li a {
+    font-size: 1.3em;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    left: 1rem;
+    color: #e5e9ea; }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #e5e9ea;
+  background-color: transparent;
+  border-bottom: 2px solid #f39700;
+  border-radius: 0; }
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent; }
+
+/*************** movie poster Con ***************/
+.posterCon img {
+  float: left;
+  margin: 10px 15px 15px 0px;
+  width: 160px; }
+.posterCon p {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #fff;
+  width: auto;
+  text-align: left;
+  width: auto;
+  overflow: hidden; }
+.posterCon h6 {
+  margin-top: 20px;
+  font-weight: bolder;
+  font-size: 1.3em;
+  color: #56989b;
+  text-align: left; }
+
+@media only screen and (min-width: 992px) {
+  .posterCon h6 {
+    margin-top: 90px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,5 @@
 @import 'colors.scss';
 @import 'mixins.scss';
-
 body {
     background-color: $dark;
     width: 100%;
@@ -20,49 +19,50 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid #ff0000;
 }
 
+
 /***********General***********/
 
-.wrapper{
+.wrapper {
     width: 100%;
 }
 
-.mainWrapper{
+.mainWrapper {
     width: 100%;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
+
 /***********Top****Bar***********/
 
-.topBar{
+.topBar {
     height: 80px;
     background: $dark;
     overflow: hidden;
-    position:fixed;
+    position: fixed;
 }
 
-.mainHeader{
-    height:50px;
-    margin:15px 0;
+.mainHeader {
+    height: 50px;
+    margin: 15px 0;
 }
 
-.logoCon{
+.logoCon {
     display: block;
     width: 225px;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-
-    img{
+    img {
         margin-right: 10px;
-        float:left;
+        float: left;
     }
-    .navbarText{
+    .navbarText {
         font-size: 1.6em;
         font-weight: 800;
         color: $light;
@@ -70,21 +70,19 @@ a:hover{
     }
 }
 
-.smIcons
-{
+.smIcons {
     float: right;
     margin-right: 15px;
-    li{
+    li {
         display: block;
         height: 50px;
         width: 50px;
-        margin-left:10px;
+        margin-left: 10px;
         float: left;
     }
 }
 
-
-.fb-icon{
+.fb-icon {
     display: block;
     height: 100%;
     width: 100%;
@@ -92,7 +90,7 @@ a:hover{
     background-size: 100%;
 }
 
-.youtube-icon{
+.youtube-icon {
     display: block;
     height: 100%;
     width: 100%;
@@ -100,7 +98,7 @@ a:hover{
     background-size: 100%;
 }
 
-.twitter-icon{
+.twitter-icon {
     display: block;
     height: 100%;
     width: 100%;
@@ -113,13 +111,11 @@ a:hover{
 //     margin: 15px 0 15px 15px;
 //     float: left;
 // }
-
 // .logoCon img
 // {
 //     float: left;
 //     margin-right: 10px;
 // }
-
 // .navbar-text
 // {
 //     font-family: 'Open Sans', sans-serif;
@@ -128,7 +124,6 @@ a:hover{
 //     color: #e5e9ea;
 //     line-height: 50px;
 // }
-
 // .smIcons{
 //     float: right;
 //     margin-right: 15px;
@@ -140,7 +135,6 @@ a:hover{
 //         float: left;
 //     }
 // }
-
 // .fb-icon{
 //     display: block;
 //     height: 100%;
@@ -148,7 +142,6 @@ a:hover{
 //     background: url(../img/facebook.svg) no-repeat;
 //     background-size: 100%;
 // }
-
 // .youtube-icon{
 //     display: block;
 //     height: 100%;
@@ -156,7 +149,6 @@ a:hover{
 //     background: url(../img/youtube.svg) no-repeat;
 //     background-size: 100%;
 // }
-
 // .twitter-icon{
 //     display: block;
 //     height: 100%;
@@ -167,81 +159,154 @@ a:hover{
 
 /*************** Side Nav ***************/
 
-.sideNav{
+.sideNav {
     position: fixed;
     height: 60px;
     width: 100%;
     bottom: 0;
     background: $aqua;
-    z-index:999;
-    ul{
+    z-index: 999;
+    ul {
         text-align: center;
         padding: 0;
     }
 }
 
-.menuBtn{
+.menuBtn {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin:15px 15px;
+    margin: 15px 15px;
     // border: solid 1px #fff;
 }
 
-.search{
+.search {
     display: block;
-    height:100%;
+    height: 100%;
     background: url(../img/search.svg) no-repeat;
     background-size: cover;
 }
 
-.home{
+.home {
     display: block;
-    height:100%;
+    height: 100%;
     background: url(../img/home.svg) no-repeat;
     background-size: cover;
 }
 
-.movies{
+.movies {
     display: block;
-    height:100%;
+    height: 100%;
     background: url(../img/play.svg) no-repeat;
     background-size: cover;
 }
 
-.comment{
+.comment {
     display: block;
-    height:100%;
+    height: 100%;
     background: url(../img/comment.svg) no-repeat;
     background-size: cover;
 }
 
 @media (min-width: 768px) {
-
-    .mainWrapper{
-        padding-left:70px;
+    .mainWrapper {
+        padding-left: 70px;
     }
-
-/************Top Bar**************/
-    .logoCon{
-        float:left;
-        margin-left:15px;
+    /************Top Bar**************/
+    .logoCon {
+        float: left;
+        margin-left: 15px;
     }
-
-
-/***********Side Bar************/
-
-    .sideNav{
+    /***********Side Bar************/
+    .sideNav {
         position: fixed;
         height: 100vh;
         width: 70px;
-        left:0;
+        left: 0;
         background: $aqua;
-        z-index:999;
-        padding-top:80px;
-        ul{
+        z-index: 999;
+        padding-top: 102px;
+        ul {
             text-align: center;
             padding: 0;
         }
+    }
+}
+
+
+/*************** Tabs ***************/
+
+.container {
+    width: 90%;
+    background: #282f3a;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.nav-pills {
+    margin: 21px 0 20px 0;
+    float: none;
+    display: inline-block;
+    li+li{
+        margin-left: 43px;
+    }
+    li{
+        a{
+          font-size: 1.3em;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    left: 1rem;
+    color: #e5e9ea;  
+        }
+    }
+}
+
+
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #e5e9ea;
+    background-color: transparent;
+    border-bottom: 2px solid #f39700;
+    border-radius: 0;
+}
+
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: transparent;
+}
+
+
+/*************** movie poster Con ***************/
+
+.posterCon {
+    img {
+        float: left;
+        margin: 10px 15px 15px 0px;
+        width: 160px;
+    }
+    p {
+        margin-top: 15px;
+        font-size: 1em;
+        color: #fff;
+        width: auto;
+        text-align: left;
+        width: auto;
+        overflow: hidden;
+    }
+    h6 {
+        margin-top: 20px;
+        font-weight: bolder;
+        font-size: 1.3em;
+        color: #56989b;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .posterCon h6 {
+        margin-top: 90px;
     }
 }
