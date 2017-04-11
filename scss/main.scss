@@ -38,6 +38,26 @@ a:hover {
     text-decoration: none;
 }
 
+.btns {
+    display: inline-block;
+    padding: 9px 68px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #fff;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 2px solid #f39700;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.btns:hover {
+    background-color: #f39700;
+    color: #fff;
+}
+
 
 /***********Top****Bar***********/
 
@@ -86,24 +106,36 @@ a:hover {
     display: block;
     height: 100%;
     width: 100%;
-    background: url(../img/facebook.svg) no-repeat;
-    background-size: 100%;
+    background: url(../img/facebookOrigin.svg) no-repeat;
+    background-size: cover;
+    &:hover {
+        background: url(../img/facebook.svg) no-repeat;
+        background-size: cover;
+    }
 }
 
 .youtube-icon {
     display: block;
     height: 100%;
     width: 100%;
-    background: url(../img/youtube.svg) no-repeat;
-    background-size: 100%;
+    background: url(../img/youtubeOrigin.svg) no-repeat;
+    background-size: cover;
+    &:hover {
+        background: url(../img/youtube.svg) no-repeat;
+        background-size: cover;
+    }
 }
 
 .twitter-icon {
     display: block;
     height: 100%;
     width: 100%;
-    background: url(../img/twitter.svg) no-repeat;
-    background-size: 100%;
+    background: url(../img/twitterOrigin.svg) no-repeat;
+    background-size: cover;
+    &:hover {
+        background: url(../img/twitter.svg) no-repeat;
+        background-size: cover;
+    }
 }
 
 // .logoCon{
@@ -247,21 +279,19 @@ a:hover {
     margin: 21px 0 20px 0;
     float: none;
     display: inline-block;
-    li+li{
+    li+li {
         margin-left: 43px;
     }
-    li{
-        a{
-          font-size: 1.3em;
-    font-family: Helvetica;
-    text-transform: uppercase;
-    left: 1rem;
-    color: #e5e9ea;  
+    li {
+        a {
+            font-size: 1.3em;
+            font-family: Helvetica;
+            text-transform: uppercase;
+            left: 1rem;
+            color: #e5e9ea;
         }
     }
 }
-
-
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -271,7 +301,6 @@ a:hover {
     border-bottom: 2px solid #f39700;
     border-radius: 0;
 }
-
 
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -308,5 +337,154 @@ a:hover {
 @media only screen and (min-width: 992px) {
     .posterCon h6 {
         margin-top: 90px;
+    }
+}
+
+
+/*************** Modal ***************/
+
+.modal-header {
+    padding: 10px;
+    border: none;
+    .close {
+        font-size: 4em;
+        font-weight: 100;
+        color: #fff;
+    }
+}
+
+.modal-dialog {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.modal-body {
+    padding: 0 0 15px 0;
+    .container {
+        border: 1px solid #fff;
+        padding: 15px;
+        color: #fff;
+        text-align: left;
+    }
+    h6 {
+        font-size: 1.5em;
+        color: #56989b;
+        margin-bottom: 18px;
+    }
+    .desc {
+        overflow-y: scroll;
+        width: 100%;
+        height: 97px;
+    }
+    textarea {
+        height: 80px;
+        border-radius: 10px;
+        width: 80%;
+        margin-left: 12px;
+        color: #1c1c1a;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .modal-dialog {
+        width: 83%;
+        margin: 257px 29px;
+    }
+    .desc {
+        overflow-y: scroll;
+        width: 206px;
+    }
+}
+
+.speechbbl {
+    position: relative;
+    padding: 5px;
+    color: #202630;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    float: right;
+    width: 82%;
+    font-size: .9em;
+    line-height: 13px;
+    margin-right: 10px;
+    span {
+        color: #55989b;
+        font-weight: bolder;
+    }
+}
+
+.userProfile {
+    width: 13%;
+    float: left;
+    margin-bottom: 23px;
+}
+
+.modal-content {
+    background-color: #282f3a;
+}
+
+.commentCon {
+    overflow-y: scroll;
+    width: 100%;
+    height: 200px;
+}
+
+.userReview {
+    text-align: center;
+}
+
+
+/*************** footer ***************/
+
+.footer-basic-centered {
+    width: 100%;
+    text-align: center;
+    padding: 45px;
+    margin: 0;
+    p>a {
+        text-transform: uppercase;
+        font: normal 1em sans-serif;
+        color: #e5e9ea;
+        margin-left: 29px;
+    }
+    p a:hover {
+        color: #f39600;
+    }
+}
+
+.footer-company-name {
+    color: #e5e9ea;
+    font-size: .9em;
+    margin: 0;
+}
+
+.footer-basic-centered .footer-links {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 35px 0 23px;
+    margin: 0;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.socialFooter {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    ul {
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        float: none;
+        margin: 10px 10px 15px 0;
     }
 }
