@@ -1,0 +1,149 @@
+body {
+  background-color: #1c1c1a;
+  width: 100%; }
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #1c1c1a; }
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f39700;
+  outline: 1px solid #ff0000; }
+
+/***********General***********/
+.wrapper {
+  width: 100%; }
+
+.mainWrapper {
+  width: 100%; }
+
+ul {
+  list-style: none; }
+
+a:hover {
+  text-decoration: none; }
+
+/***********Top****Bar***********/
+.topBar {
+  height: 80px;
+  background: #1c1c1a;
+  overflow: hidden;
+  position: fixed; }
+
+.mainHeader {
+  height: 50px;
+  margin: 15px 0; }
+
+.logoCon {
+  display: block;
+  width: 225px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif; }
+  .logoCon img {
+    margin-right: 10px;
+    float: left; }
+  .logoCon .navbarText {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: #e5e9ea;
+    line-height: 50px; }
+
+.smIcons {
+  float: right;
+  margin-right: 15px; }
+  .smIcons li {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    float: left; }
+
+.fb-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(../img/facebook.svg) no-repeat;
+  background-size: 100%; }
+
+.youtube-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(../img/youtube.svg) no-repeat;
+  background-size: 100%; }
+
+.twitter-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(../img/twitter.svg) no-repeat;
+  background-size: 100%; }
+
+/*************** Side Nav ***************/
+.sideNav {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  background: #56989b;
+  z-index: 999; }
+  .sideNav ul {
+    text-align: center;
+    padding: 0; }
+
+.menuBtn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px 15px; }
+
+.search {
+  display: block;
+  height: 100%;
+  background: url(../img/search.svg) no-repeat;
+  background-size: cover; }
+
+.home {
+  display: block;
+  height: 100%;
+  background: url(../img/home.svg) no-repeat;
+  background-size: cover; }
+
+.movies {
+  display: block;
+  height: 100%;
+  background: url(../img/play.svg) no-repeat;
+  background-size: cover; }
+
+.comment {
+  display: block;
+  height: 100%;
+  background: url(../img/comment.svg) no-repeat;
+  background-size: cover; }
+
+@media (min-width: 768px) {
+  .mainWrapper {
+    padding-left: 70px; }
+
+  /************Top Bar**************/
+  .logoCon {
+    float: left;
+    margin-left: 15px; }
+
+  /***********Side Bar************/
+  .sideNav {
+    position: fixed;
+    height: 100vh;
+    width: 70px;
+    left: 0;
+    background: #56989b;
+    z-index: 999;
+    padding-top: 80px; }
+    .sideNav ul {
+      text-align: center;
+      padding: 0; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+//mixin
+
+@mixin transition($effect){
+	-webkit-transition: $effect;
+	-moz-transition: $effect;
+	-ms-transition: $effect;
+	-o-transition: $effect;
+	transition: $effect;
+}
+
+@mixin transform($trans){
+	-webkit-transform: $trans;
+	-moz-transform: $trans;
+	-ms-transform: $trans;
+	-o-transform: $trans;
+	transform: $trans;
+}
+
+@mixin animation($animate){
+	-webkit-animation: $animate;
+	-moz-animation: $animate;
+	-ms-animation: $animate;
+	-o-animation: $animate;
+	animation: $animate;
+}
