@@ -16,10 +16,10 @@
 <metadata>
 	<sfw  xmlns="&ns_sfw;">
 		<slices></slices>
-		<sliceSourceBounds  x="-0.5" y="0.5" width="300" height="300" bottomLeftOrigin="true"></sliceSourceBounds>
+		<sliceSourceBounds  height="300" width="300" y="0.5" x="-0.5" bottomLeftOrigin="true"></sliceSourceBounds>
 	</sfw>
 </metadata>
-<circle fill="#282F39" cx="150" cy="150" r="150"/>
+<circle fill="#F39600" cx="150" cy="150" r="150"/>
 <g>
 	<g>
 		<path fill="#FFFFFF" d="M230,96.25c-5.625,3.125-12.5,5-18.75,5.625c6.875-4.375,11.875-11.25,14.375-19.375
