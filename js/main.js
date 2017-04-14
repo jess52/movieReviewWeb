@@ -1,7 +1,22 @@
-$('#tabAll').on('click', function() {
-    $('#tabAll').parent().addClass('active');
-    // Cancel the default action
-    //e.preventDefault(); 
-    $('.tab-pane').addClass('active in');
-    $('[data-toggle="tab"]').parent().removeClass('active');
-});
+(function(){
+	$(document).ready(function(){
+		$('.nav li').on('click', function(){
+		    $('.nav li').removeClass('active');
+		    $(this).addClass('active');
+		});
+
+		$('.search').click(function(){
+			$('.searchBar').removeClass('hidden');
+		});
+
+		$(document).click(function(e) {
+			var target = e.target;
+
+			if (!$(target).is('.searchBar') && !$(target).is('.search')) {
+				$('.searchBar').addClass('hidden').val("");
+			}
+		});
+
+	});
+
+})();
