@@ -320,6 +320,14 @@ a:hover {
     text-align: center;
 }
 
+.nav {
+    li {
+        a{
+    padding: 10px 10px;
+        }
+    }
+}
+
 .nav-pills {
     margin: 21px 0 20px 0;
     float: none;
@@ -332,7 +340,6 @@ a:hover {
             font-size: 1.3em;
             font-family: Helvetica;
             text-transform: uppercase;
-            left: 1rem;
             color: #e5e9ea;
         }
     }
@@ -353,6 +360,16 @@ a:hover {
 }
 
 
+@media only screen and (max-width: 480px) {
+.nav-pills > li {
+    float: none;
+    margin-left: 0;
+}
+.nav-pills li + li {
+    margin-left: 0;
+}
+}
+
 /*************** movie poster Con ***************/
 
 .posterCon {
@@ -369,6 +386,7 @@ a:hover {
         text-align: left;
         width: auto;
         overflow: hidden;
+        height: 120px;
     }
     h6 {
         margin-top: 20px;
@@ -379,9 +397,21 @@ a:hover {
     }
 }
 
+@media only screen and (max-width: 320px) {
+     .posterCon h6 {
+        
+        font-size: 1em;
+    }
+    .posterCon img {
+        width: 119px;
+    }
+
+}
+
+
 @media only screen and (min-width: 992px) {
     .posterCon h6 {
-        margin-top: 90px;
+        margin-top: 62px;
     }
 }
 
@@ -462,8 +492,13 @@ a:hover {
 
 .userProfile {
     width: 13%;
-    float: left;
     margin-bottom: 23px;
+}
+
+.userPf {
+    width: 13%;
+    margin-bottom: 23px;
+    float: left;
 }
 
 .modal-content {
@@ -474,6 +509,12 @@ a:hover {
     overflow-y: scroll;
     width: 100%;
     height: 200px;
+}
+
+@media only screen and (min-width: 1650px) {
+    .commentCon {
+            height: 351px;
+    }
 }
 
 .userReview {
@@ -492,7 +533,7 @@ a:hover {
         text-transform: uppercase;
         font: normal 1em sans-serif;
         color: #e5e9ea;
-        margin-left: 29px;
+        margin-left: 20px;
     }
     p a:hover {
         color: #f39600;
@@ -504,18 +545,33 @@ a:hover {
     font-size: .9em;
     margin: 0;
 }
-
 .footer-basic-centered .footer-links {
     list-style: none;
     font-weight: bold;
     color: #ffffff;
     padding: 35px 0 23px;
     margin: 0;
+
     a {
         display: inline-block;
         text-decoration: none;
         color: inherit;
+
     }
+}
+
+@media only screen and (max-width: 480px) {
+
+.footer-basic-centered {
+    padding-top: 0px;
+
+.footer-links a {
+
+    display: block;
+    margin-top: 17px;
+    }
+}
+
 }
 
 .socialFooter {

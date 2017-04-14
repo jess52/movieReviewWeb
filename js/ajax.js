@@ -1,6 +1,8 @@
 (function(){
 	var movieCon = $('.posterCon'),
-		movieInfo = $('.movieInfo');
+		movieInfo = $('.movieInfo'),
+		commentCon = $('.commentCon');
+
 	$(document).ready(function(){
 		loadMovies();
 		$('.categories').click(function(e){
@@ -22,14 +24,6 @@
 			}
 		});
 
-		$('.poster-link').click(function(e){
-			e.preventDefault();
-			var img = $('.poster-link img');
-			var title = $(this).find(img).attr('alt');
-			console.log(title);
-			getSingle(title);
-		});
-
 	});
 
 
@@ -47,6 +41,28 @@
 					// console.log(title);
 					getSingle(title);
 				});
+
+				$('.submitBtn').click(function(evt){
+					//console.log('workings');
+					evt.preventDefault();
+					var comment = $('.commentArea').val();
+					//console.log(comment);
+					var movieName = $(this).parents('.mvc').siblings('.movieInfo').find('h6').text();
+
+					var id = $(this).parents('.mvc').siblings('.movieInfo').find('h6').attr('class');
+					// console.log(id);
+
+					if (!$('.commentArea').val()){
+						console.log('write something');
+					}else{
+						// console.log('this is comment');
+						postComment(comment, movieName, id);
+					}
+
+					$('.commentArea').val('');
+					// $('.commentArea').scrollTop($('.commentArea').height());
+				});
+
 			}
 		});
 	}
@@ -67,6 +83,27 @@
 					// console.log(title);
 					getSingle(title);
 				});
+
+				$('.submitBtn').click(function(evt){
+					//console.log('workings');
+					evt.preventDefault();
+					var comment = $('.commentArea').val();
+					//console.log(comment);
+					var movieName = $(this).parents('.mvc').siblings('.movieInfo').find('h6').text();
+
+					var id = $(this).parents('.mvc').siblings('.movieInfo').find('h6').attr('class');
+					// console.log(id);
+
+					if (!$('.commentArea').val()){
+						console.log('write something');
+					}else{
+						// console.log('this is comment');
+						postComment(comment, movieName, id);
+					}
+
+					$('.commentArea').val('');
+
+				});
 			}
 		});
 	}
@@ -85,12 +122,35 @@
 					var title = $(this).find(img).attr('alt');
 					// console.log(title);
 					getSingle(title);
+
 				});
+
+				$('.submitBtn').click(function(evt){
+					//console.log('workings');
+					evt.preventDefault();
+					var comment = $('.commentArea').val();
+					//console.log(comment);
+					var movieName = $(this).parents('.mvc').siblings('.movieInfo').find('h6').text();
+
+					var id = $(this).parents('.mvc').siblings('.movieInfo').find('h6').attr('class');
+					// console.log(id);
+
+					if (!$('.commentArea').val()){
+						console.log('write something');
+					}else{
+						// console.log('this is comment');
+						postComment(comment, movieName, id);
+					}
+
+					$('.commentArea').val('');
+				});
+
 			}
 		});
 	}
 
 	function getSingle(title){
+
 		$.ajax({
 			url:'./script/getSingle.php',
 			method:'get',
@@ -100,6 +160,40 @@
 				movieInfo.html(data);
 			}
 		});
+
+		$.ajax({
+			url:'./script/comment.php',
+			method:'get',
+			data:{title:title},
+			success:function(msg){
+				commentCon.html(msg);
+			}
+		});
 	}
+
+
+	function postComment(comment, movieName, id){
+		$.ajax({
+			url:'./script/postComment.php',
+			method:'post',
+			data:{comment:comment,
+				movieName:movieName,
+				id: id},
+			success:function(){
+				// console.log(comment+movieName+id);
+				// $(".commentCon").load('',".commentCon");
+				$.ajax({
+					url:'./script/comment.php',
+					method:'get',
+					data:{title:movieName},
+					success:function(msg){
+					commentCon.html(msg);
+					}
+				});
+			}
+		});
+	}
+
+
 
 })();

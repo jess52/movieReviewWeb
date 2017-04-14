@@ -1,8 +1,8 @@
 <?php
 	require_once('connect.php');
+	$output = '';
 	if (isset($_POST['query'])) {
 		$query = $_POST['query'];
-		$output = '';
 		$search = mysqli_real_escape_string($link, $query);
 		$searchQuery = "SELECT * FROM tbl_movies WHERE movies_title LIKE '$search%' OR movies_year LIKE '$search%' ORDER BY movies_title ASC";
 		$result = mysqli_query($link, $searchQuery);

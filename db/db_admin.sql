@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2017 at 05:27 AM
+-- Generation Time: Apr 14, 2017 at 08:57 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -225,6 +225,135 @@ INSERT INTO `tbl_cat` (`cat_id`, `cat_name`, `cat_desc`) VALUES
 (2, 'comedy', 'Think of Eddie Murphy'),
 (3, 'family', 'Think of Disney'),
 (4, 'horror', 'Think of Borat in a bikini');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_comment`
+--
+
+CREATE TABLE `tbl_comment` (
+  `cmt_id` int(10) UNSIGNED NOT NULL,
+  `cmt_content` text NOT NULL,
+  `movies_id` smallint(4) NOT NULL,
+  `movies_title` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_comment`
+--
+
+INSERT INTO `tbl_comment` (`cmt_id`, `cmt_content`, `movies_id`, `movies_title`) VALUES
+(1, 'Sam Raimi\'s Army of Darkness delivers a great conclusion to what is one of the most unique trilogies in cinema history, providing a ton of laughs and plenty of exciting action in the process.', 7, 'Army Of Darkness'),
+(2, 'fdsfs', 4, 'Last Exorcism'),
+(3, 'fdsfs', 4, 'Last Exorcism'),
+(4, 'fdfa', 4, 'Last Exorcism'),
+(5, 'd', 5, 'House At The End Of The Street'),
+(6, 'd', 5, 'House At The End Of The Street'),
+(7, 'd', 5, 'House At The End Of The Street'),
+(8, 'd', 5, 'House At The End Of The Street'),
+(9, 'd', 5, 'House At The End Of The Street'),
+(10, 'ddd', 5, 'House At The End Of The Street'),
+(11, 'ffaf', 5, 'House At The End Of The Street'),
+(12, 'ffaf', 5, 'House At The End Of The Street'),
+(13, 'ffaffasdfa', 5, 'House At The End Of The Street'),
+(14, 'fsadfas', 7, 'Army Of Darkness'),
+(15, 'dsfa', 7, 'Army Of Darkness'),
+(16, 'dasdd', 9, 'Despicable Me'),
+(17, 'dasdd', 9, 'Despicable Me'),
+(18, 'dasddfdsafas', 9, 'Despicable Me'),
+(19, 'fasdfa', 9, 'Despicable Me'),
+(20, 'fasdfafdsafs', 9, 'Despicable Me'),
+(21, 'fsadfa', 9, 'Despicable Me'),
+(22, 'asda', 9, 'Despicable Me'),
+(23, 'dfsafdsa', 10, 'Frankenweenie'),
+(24, 'dfsafdsa', 10, 'Frankenweenie'),
+(25, 'dfsafdsa', 10, 'Frankenweenie'),
+(26, 'ds', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(27, 'fsadfas', 10, 'Frankenweenie'),
+(28, 'This is a comment', 10, 'Frankenweenie'),
+(29, 'fasdfsa', 11, 'Gnomeo And Juliet'),
+(30, 'fdsafsa', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(31, 'fdsafsafdsadfas', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(32, 'fdsafsafdsadfasfasdfa', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(33, 'fdsafsafdsadfasfasdfa', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(34, 'fdsafsa', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(35, 'fdsaf', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(36, 'xxff', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(37, 'fsdaf', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(38, 'fsadfdas', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(39, 'sadfas', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(40, 'fsadfsaf', 12, 'Ice Age: Dawn of the Dinosaurs'),
+(41, 'dfsafas fa', 8, 'Cloudy With A Chance Of Meatballs'),
+(42, 'fsadfasfsadf', 2, 'The Possession'),
+(43, 'fsadfasfsadf', 1, 'Tremors'),
+(44, 'fsadfasfsadffsdfaf', 1, 'Tremors'),
+(45, 'fasdfsaf', 1, 'Tremors'),
+(46, 'fasdfsaf', 1, 'Tremors'),
+(47, 'fasdfsaf', 1, 'Tremors'),
+(48, 'fasdfsaf', 1, 'Tremors'),
+(49, 'fsafasf', 1, 'Tremors'),
+(50, 'dfas fasf a', 1, 'Tremors'),
+(51, 'My comment', 1, 'Tremors'),
+(52, 'fsadf asfd', 4, 'Last Exorcism'),
+(53, 'fsadfasfda', 22, 'Black Hawk Down'),
+(54, 'fsadfasfdasf', 23, 'Dredd'),
+(55, 'My First Commit', 17, 'Horrible Bosses'),
+(56, 'Comment\n', 17, 'Horrible Bosses'),
+(57, 'dsaf fakj sfhdsakjlfh jshf jas hfjahfj sahf dhasfj hsadjkf haskj dhfjask dhfjkashdf hasjdf haskj fds', 15, 'Beetlejuice'),
+(58, 'Adam and Barbara are a normal couple...', 15, 'Beetlejuice'),
+(59, 'fdsfa', 3, 'Pet Sematary'),
+(60, 'In Baton Rouge, Louisiana, the evangelical Reverend Cotton Marcus was raised by his father to be a preacher. He agrees that the filmmaker Iris Reisen and the cameraman Daniel Moskowitz make a documentary about his life. Cotton tells that when his wife Shanna Marcus had troubles in the ', 4, 'Last Exorcism'),
+(61, 'dsafas', 6, 'Halloween 2'),
+(62, 'sd af ', 7, 'Army Of Darkness'),
+(63, 'edieval castle beset by monstrous forces. Initially mistaken for an enemy, he is soon revealed as the prophecised safsda f', 7, 'Army Of Darkness'),
+(64, 'fasfasf', 7, 'Army Of Darkness'),
+(65, 'Garden gnomes Gnomeo (voice of McAvoy) and Juliet (voice of Blunt) have as many obstacles to overcome as their quasi namesakes when they are caught up in a feud between neighbors. But with plastic pink flamingos and lawnmower races in the mix, can this young couple find lasting happiness?', 11, 'Gnomeo And Juliet'),
+(66, 'vsdaf', 17, 'Horrible Bosses'),
+(67, 'adsad', 17, 'Horrible Bosses'),
+(68, 'good i like this movie\n', 17, 'Horrible Bosses'),
+(69, ' and before they know it, theyve hired a murder consultant to help them pull off the three deeds.', 17, 'Horrible Bosses'),
+(70, 'fasd fdasfas ', 19, 'Snatch'),
+(71, '', 19, 'Snatch'),
+(72, '', 19, 'Snatch'),
+(73, '', 19, 'Snatch'),
+(74, '', 8, 'Cloudy With A Chance Of Meatballs'),
+(75, '', 8, 'Cloudy With A Chance Of Meatballs'),
+(76, '', 8, 'Cloudy With A Chance Of Meatballs'),
+(77, '', 8, 'Cloudy With A Chance Of Meatballs'),
+(78, '', 5, 'House At The End Of The Street'),
+(79, 'fa sfdas ', 5, 'House At The End Of The Street'),
+(80, ' asdf asf ', 5, 'House At The End Of The Street'),
+(81, 'fds fas fasdf', 9, 'Despicable Me'),
+(82, 'fdsaf asfas dfasdf as.\'afasf', 9, 'Despicable Me'),
+(83, 'fsaf asf asf asdf\'\'', 9, 'Despicable Me'),
+(84, 'fsafa fasf as\'f dsaf a', 9, 'Despicable Me'),
+(85, ' saf asfdsafas', 6, 'Halloween 2'),
+(86, 'f asfa sfdas fafa sdfas fas f dfasf as', 6, 'Halloween 2'),
+(87, 'dontfs adf af', 6, 'Halloween 2'),
+(88, '92 min\n\nIts the same night as the original Halloween. Michael Myers is around the neighborhood, after being gunned by Dr.Loomis six times. Now, hes in a hospital where the girl Laurie Strode was taken. And theres a reason why Michael is after her', 6, 'Halloween 2'),
+(89, 'd fsa fasf af\'fa sfda f', 6, 'Halloween 2'),
+(90, 'dont\'df af afs', 6, 'Halloween 2'),
+(91, 'i don\'t know', 21, 'To Rome With Love'),
+(92, 'Action/war drama based on the best-selling book detailing a near-disastrous mission in Somalia on October 3, 1993. On this date nearly 100 U.S. Army Rangers, commanded by Capt. Mike Steele, were dropped by helicopter deep into the capital city of Mogadishu to capture two top lieutenants of a Somali warlord. This lead to a large and drawn-out firefight between the Rangers and hundreds of Somali gunmen, leading to the destruction of two U.S. Black Hawk helicopters. This film focuses on the heroic efforts of various Rangers to get to the downed black hawks, centering on Sgt. Eversmann, leading the Ranger unit Chalk Four to the first black hawk crash site, Warrant Officer Durant who was captured after being the only survivor of the second black hawk crash, as well as many others who were involved.', 22, 'Black Hawk Down'),
+(93, 'Angelenos Doug Billings and Tracy Garner are about to get married. Two days before the wedding, the four men in the wedding party - Doug, Doug\'s two best buddies Phil Wenneck and Stu Price, and Tracy\'s brother Alan Garner - hop into Tracy\'s father\'s beloved Mercedes convertible for a 24-hour stag party to Las Vegas. Phil, a married high school teacher, has the same maturity level as his students when he\'s with his pals. Stu, a den', 20, 'The Hangover'),
+(94, '&quot;&quot;&quot;f sadf asf ', 19, 'Snatch'),
+(95, 'ish and his close friend/accomplice Tommy get pulled into the world of match fixing by the notorious Brick Top. Things get complicated when the boxer they had lined up gets the shit kicked out of him by Pitt, a \'pikey\' ( slang for an Irish Gypsy)- who comes into the equation after Turkish, an unlicensed boxing promoter wants to buy a caravan off the Irish Gypsies. They then try to convince Pitt not only to fight for them, but to lose for them too. Whilst all this is going on, a huge diamond heist takes place, and a fistful of motley characters enter the story, including \'Cousin Avi\', \'Boris The Blade\', \'Franky Four Fingers\' and \'Bullet Tooth Tony\'. Things go from bad to worse as it all becomes about the money, the guns, and the damned dog!', 19, 'Snatch'),
+(96, 'my comment \'o', 11, 'Gnomeo And Juliet'),
+(97, 'this is a good movie!', 1, 'Tremors'),
+(98, 'jdfh jasdkhf kjash fjasdf asf asdfas gsadgfasdf', 15, 'Beetlejuice'),
+(99, 'fa fdsaf asf asdf ', 15, 'Beetlejuice'),
+(100, 'fsdf asfd a', 18, 'Kick-Ass'),
+(101, 'asf asd fs f', 10, 'Frankenweenie'),
+(102, ' fadfasf adsf asdf', 10, 'Frankenweenie'),
+(103, 'f dsf asdf as', 10, 'Frankenweenie'),
+(104, 'f sdfa fas f', 3, 'Pet Sematary'),
+(105, 'f dsafs af a', 3, 'Pet Sematary'),
+(106, 'f sdaf sadf asfa sf', 3, 'Pet Sematary'),
+(107, 'aaaaaaaaaaaaaaaaaaaaaaaaaaa', 28, 'The Usual Suspects'),
+(108, 'dddddddddddd\'ssssssssssssssssssss', 28, 'The Usual Suspects'),
+(109, 'fds fdsa fasd fasd fa', 16, 'Ghostbusters'),
+(110, ' asddddddddddddddddddddddddddddddddddddddddddddddd', 16, 'Ghostbusters');
 
 -- --------------------------------------------------------
 
@@ -520,6 +649,12 @@ ALTER TABLE `tbl_cat`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  ADD PRIMARY KEY (`cmt_id`);
+
+--
 -- Indexes for table `tbl_director`
 --
 ALTER TABLE `tbl_director`
@@ -581,6 +716,11 @@ ALTER TABLE `tbl_cast`
 --
 ALTER TABLE `tbl_cat`
   MODIFY `cat_id` smallint(4) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  MODIFY `cmt_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 --
 -- AUTO_INCREMENT for table `tbl_director`
 --
