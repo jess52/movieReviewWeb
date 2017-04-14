@@ -18,7 +18,7 @@
 			while ($row = mysqli_fetch_array($result)) {
 				$output .="<div class=\"col-md-6 col-xs-6\">
 					<a href=\"#poster-army\" class=\"poster-link\" data-toggle=\"modal\" data-target=\"#poster-army\">
-						<img src=\"img/".$row['movies_thumb']."\" alt=\"".$row['movies_title']."\" data-id=\"".$row['movies_id']."\">
+						<img src=\"img/".$row['movies_thumb']."\" alt=\"".$row['movies_title']."\">
 						<h6>".$row['movies_title']."</h6>
 						<p>".$row['movies_storyline']."</p>
 					</a>
@@ -34,7 +34,7 @@
 			while ($row = mysqli_fetch_array($result)) {
 				$output .="<div class=\"col-md-6 col-xs-6\">
 					<a href=\"#poster-army\" class=\"poster-link\" data-toggle=\"modal\" data-target=\"#poster-army\">
-						<img src=\"img/".$row['movies_thumb']."\" alt=\"".$row['movies_title']."\" data-id=\"".$row['movies_id']."\">
+						<img src=\"img/".$row['movies_thumb']."\" alt=\"".$row['movies_title']."\">
 						<h6>".$row['movies_title']."</h6>
 						<p>".$row['movies_storyline']."</p>
 					</a>
