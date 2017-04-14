@@ -1,5 +1,6 @@
 (function(){
 	var movieCon = $('.posterCon');
+	
 	$(document).ready(function(){
 		loadMovies();
 		$('.categories').click(function(e){
@@ -11,6 +12,13 @@
 			}
 			else{
 				movieCat(type);
+			}
+		});
+
+		$('.searchBar').keyup(function(){
+			var search = $(this).val();
+			if(search != ''){
+				searchMovies(search);
 			}
 		});
 	});
@@ -39,4 +47,17 @@
 			}
 		});
 	}
+
+	function searchMovies(query){
+		$.ajax({
+			url:'./script/search.php',
+			method:'post',
+			datatype:'json',
+			data:{query:query},
+			success:function(data){
+				movieCon.html(data);
+			}
+		});
+	}
+
 })();
